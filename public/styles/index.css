@@ -1,0 +1,181 @@
+:root {
+  --white: #ffffff;
+  --primary: #ff5e84;
+  --primary-shadow: #ff5e8460;
+  --background: #e5e5e5;
+  --text-on-light: #25282b;
+  --text-on-light2: #777777;
+  --text-on-dark: var(--white);
+  --button-hover: #0984e3;
+}
+
+/* Default Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-on-light);
+
+  font-family: 'Montserrat', sans-serif;
+}
+
+body.hideScroll {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: bold;
+
+  transition: all 400ms;
+}
+
+a:hover {
+  text-decoration: underline;
+  opacity: 1;
+}
+
+p, .description {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+}
+
+.button {
+  color: var(--text-on-dark);
+  background-color: var(--primary);
+
+  width: 150px;
+  height: 40px;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  border-radius: 8px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0px 8px 16px var(--primary-shadow);
+
+  transition: all 200ms;
+}
+
+.button:hover {
+  background-color: var(--button-hover);
+  text-decoration: none;
+}
+
+/* Page Index */
+
+#container {
+  width: 80%;
+  max-width: 980px;
+
+  margin: 40px auto;
+  display: flex;
+}
+
+#intro {
+  width: 300px;
+  margin-right: 64px;
+}
+
+#intro main {
+  margin: 32px 0;
+}
+
+#intro main p {
+  margin: 20px 0;
+}
+
+#intro main p span {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+#buttons {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 32px;
+}
+
+button {
+  color: var(--primary);
+  background: none;
+  border: none;
+
+  font-weight: bold;
+
+  cursor: pointer;
+  outline: none;
+
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+}
+
+button:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+
+  color: var(--text-on-light2);
+}
+
+footer a {
+  opacity: 0.8;
+}
+
+.idea {
+  display: flex;
+  
+  padding: 32px;
+  margin-bottom: 32px;
+
+  border-radius: 8px;
+  box-shadow: 0 4px 16px -8px rgba(1,1,1, .1);
+
+  background-color: var(--white);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.idea img {
+  width: 60px;
+  height: 60px;
+
+  margin-right: 32px;
+}
+
+.idea p {
+  font-size: 14px;
+  margin: 8px 0;
+  color: var(--text-on-light2);
+}
+
+.description {
+  margin: 16px 0;
+}
+
+.idea a {
+  align-self: flex-end;
+}
