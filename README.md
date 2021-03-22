@@ -117,10 +117,10 @@ As seguintes tecnologias/ferramentas foram utilizadas:
 #->No terminal:
 
 # Clonar repositório:
-$ git clone https://github.com/abner-starkasty/Ecoleta-JS
+$ git clone https://github.com/abner-starkasty/casa-criativa
 
 # Entrar no diretório do projeto:
--> $ cd Ecoleta-JS
+-> $ cd casa-criativa
 
 # Instalar dependências
 $ npm install
