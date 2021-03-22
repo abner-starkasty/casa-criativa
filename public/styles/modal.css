@@ -1,7 +1,7 @@
 #modal {
   background-color: var(--primary);
 
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
@@ -18,7 +18,7 @@
 }
 
 #modal .content {
-  margin-top: 8%;
+  margin-top: 5%;
 
   color: var(--text-on-dark);
 }

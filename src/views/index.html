@@ -1,137 +1,42 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Home | Casa Criativa</title>
+{% extends 'layout.html' %}
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="public/styles/index.css">
-    <link rel="stylesheet" href="public/styles/modal.css">
-  </head>
-  <body>
-    
-    <div id="container">
-      <section id="intro">
-        <header>
-          <a href="index.html">
-            <img src="public/assets/Logo.svg" alt="Imagem da Logomarca">
-          </a>
-        </header>
-    
-        <main>
-          <p>
-            Ficar em casa em períodos longos, não deve ser nada fácil.
-          </p>
-      
-          <p>
-            Por isso, iremos catalogar ideias, <strong>brincadeiras, jogos, filmes, livros, cursos, dicas</strong> e tudo que for necessário para tornar esse momento mais interessante.
-          </p>
-      
-          <p>
-            Comece clicando em <span>ver ideias</span> para ver as  ideias cadastradas e contribua <span>adicionando a sua ideia.</span>
-          </p>
-        </main>
-    
-        <section id="buttons">
-          <button onclick="onOff()"> + Adicionar Ideia</button>
-          <a href="ideas.html" class="button"> Ver Ideias</a>
-        </section>
-    
-        <footer>
-          Com 💜 <a href="http://www.rocketseat.com.br" target="_blank">Rocketseat</a>
-        </footer>
-      </section>
+{% block title %}
+  <title>Home | Casa Criativa</title>
+{% endblock title %}
 
-      <section id="last-ideas">
-        <div class="idea">
-          <img 
-            src="https://www.flaticon.com/svg/vstatic/svg/950/950018.svg?token=exp=1616350016~hmac=fa7833b8fac595a51fd2b9d813269ed1" 
-            alt="Imagem de curso de programação"
-          >
+{% block content %}
 
-          <div class="content">
-            <h3>Cursos de Programação</h3>
-            <p>Estudo</p>
-            <div class="description">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam dolor nisi consequuntur, ipsam expedita vitae pariatur consectetur itaque ipsum dolore, hic recusandae voluptates molestiae. Est dolore aliquam tenetur ipsum consequuntur.
-            </div>
-            <a href="#">Ir para a Ideia</a>
-          </div>
-        </div>
-        <div class="idea">
-          <img 
-            src="https://www.flaticon.com/svg/vstatic/svg/3480/3480211.svg?token=exp=1616350293~hmac=fdd5022856ebaf92ec367252ec81a688" 
-            alt="Imagem de Exercícios"
-          >
+  <section id="intro">
+    <header>
+      <a href="/">
+        <img src="/assets/Logo.svg" alt="Imagem da Logomarca">
+      </a>
+    </header>
 
-          <div class="content">
-            <h3>Exercícios</h3>
-            <p>Saúde</p>
-            <div class="description">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam dolor nisi consequuntur, ipsam expedita vitae pariatur consectetur itaque ipsum dolore, hic recusandae voluptates molestiae. Est dolore aliquam tenetur ipsum consequuntur.
-            </div>
-            <a href="#">Ir para a Ideia</a>
-          </div>
-        </div>
-        <div class="idea">
-          <img 
-            src="https://www.flaticon.com/svg/vstatic/svg/4072/4072337.svg?token=exp=1616350386~hmac=d724e35786363884a1da6787ba5df62b"
-            alt="Imagem de Meditação"
-          >
+    <main>
+      <p>
+        Ficar em casa em períodos longos, não deve ser nada fácil.
+      </p>
 
-          <div class="content">
-            <h3>Meditação</h3>
-            <p>Mentalidade</p>
-            <div class="description">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam dolor nisi consequuntur, ipsam expedita vitae pariatur consectetur itaque ipsum dolore, hic recusandae voluptates molestiae. Est dolore aliquam tenetur ipsum consequuntur.
-            </div>
-            <a href="#">Ir para a Ideia</a>
-          </div>
-        </div>
-      </section>
-    </div>
+      <p>
+        Por isso, iremos catalogar ideias, <strong>brincadeiras, jogos, filmes, livros, cursos, dicas</strong> e tudo que for necessário para tornar esse momento mais interessante.
+      </p>
 
-    <div id="modal" class="hide">
-      <div class="content">
-        <h1>Nova Ideia</h1>
+      <p>
+        Comece clicando em <span>ver ideias</span> para ver as  ideias cadastradas e contribua <span>adicionando a sua ideia.</span>
+      </p>
+    </main>
 
-        <form action="">
-          <div class="input-wrapper">
-            <label for="title">Título da Ideia</label>
-            <input type="text" name="title" id="title">
-          </div>
-        
-          <div class="input-wrapper">
-            <label for="category">Categoria</label>
-            <input type="text" name="category" id="category">
-          </div>
+    <section id="buttons">
+      <button onclick="onOff()"> + Adicionar Ideia</button>
+      <a href="/ideias" class="button"> Ver Ideias</a>
+    </section>
 
-          <div class="input-wrapper">
-            <label for="image">Link da Imagem</label>
-            <input type="url" name="image" id="image">
-          </div>
+    {% include 'parts/footer.html' %}
+  </section>
 
-          <div class="input-wrapper">
-            <label for="description">Digite uma descrição para essa Ideia</label>
-            <textarea name="description" id="description" cols="30" rows="10"></textarea>
-          </div>
+  <section id="last-ideas">
+    {% include 'parts/loop_ideas.html' %}
+  </section>
 
-          <div class="input-wrapper">
-            <label for="link">Link da Ideia</label>
-            <input type="url" name="link" id="link">
-          </div>
-
-          <a href="#" onclick="onOff()">Voltar</a>
-          <button>Salvar</button>
-        </form>
-      </div>
-    </div>
-
-    <script src="public/scripts.js"></script>
-  </body>
-</html>
+{% endblock content %}
