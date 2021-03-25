@@ -42,7 +42,7 @@
 
 ### 🔖 Sobre
 
-🏡🏠 Casa Criativa é um projeto desenvolvido no início da pandemia do covid-19 (março/2020) com intuito de auxiliar as pessoas com possíveis atividades durante a quarentena.
+🏡🏠 Casa Criativa é um projeto desenvolvido no início da pandemia do covid-19 (abril/2020) com intuito de auxiliar as pessoas com possíveis atividades durante a quarentena.
 
 Foi desenvolvido durante o projeto **#Reboot**. Uma parceria de diversas empresas do ramo de Tecnologia. O Projeto em si foi lecionado pela [**Rocketseat**](https://rocketseat.com.br/).
 
